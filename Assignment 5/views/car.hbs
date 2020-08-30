@@ -1,0 +1,39 @@
+<div class="row">     
+    <div class="col-md-12">         
+        <h2>{{viewData.cars.make}} - make: {{viewData.cars.vin}}</h2>         
+        <hr /> 
+        <form method="post" action="/car/update">     
+        <input class="form-control" id="id" name="id" type="hidden" value="{{viewData.cars.vin}}" />          
+                              
+        <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="first_name">Car Make:</label>
+                                <input class="form-control" id="make" name="make" type="text"  value="{{viewData.cars.make}}" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="last_name">Car Model:</label>
+                                <input class="form-control" id="model" name="model" label="Car Model" type="text"  value="{{viewData.cars.model}}" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="phone">Car year:</label>
+                                <input class="form-control" id="year" name="year"  type="text" label="Car Year" value="{{viewData.cars.year}}" />
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>        
+            <hr/>
+            <input type="submit" class="btn btn-primary pull-right" value="Update Car" /><br /><br /><br />         
+        </form>     
+    </div> 
+</div> 
